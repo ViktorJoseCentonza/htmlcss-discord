@@ -1,0 +1,265 @@
+/*general-attributes-begin*/
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/*general-attributes-end*/
+
+/*utility-begin*/
+.d-flex {
+    display: flex;
+}
+
+/*premade-containers-sizing-begin*/
+
+.content-section {
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    padding: 3.125rem 0rem 3.125rem 0rem;
+
+    .content-container {
+        justify-content: center;
+        align-items: center;
+        width: 62.5%;
+        height: 100%;
+
+        .img-container {
+            height: 100%;
+            flex-grow: 3;
+        }
+
+        .paragraph-container {
+            height: 100%;
+            flex-grow: 2;
+        }
+
+        .vertical-container {
+            height: 100%;
+            flex-grow: 1;
+        }
+    }
+}
+
+/*premade-containers-sizing-end*/
+
+
+/*utility-end*/
+
+
+/*debug-begin*/
+.debug {
+
+    header {
+        background-color: red;
+
+        .header-container {
+            background-color: yellow;
+
+            nav {
+                background-color: orange;
+            }
+
+            #logo-container {
+                background-color: green;
+            }
+
+            #login-container {
+                background-color: green;
+            }
+        }
+    }
+
+    /*box around all divs inside main and inside those divs*/
+    header div div,
+    header div nav,
+    section div,
+    section div div {
+
+        border: 2px dotted black;
+    }
+
+    #info-section div div:not(#social-container) {
+        border: 2px dotted white;
+    }
+
+    /*box-debug-end*/
+    /*premade-containers-debug-begin*/
+
+    .content-container {
+        background-color: violet;
+
+        .img-container {
+            background-color: lightcoral;
+        }
+
+        .paragraph-container {
+            background-color: pink;
+        }
+
+        .vertical-container {
+            background-color: turquoise;
+        }
+
+    }
+
+
+    /*premade-containers-debug-end*/
+
+    main {
+        #jumbotron {
+            background-color: blue;
+        }
+
+        #invite-only {
+            background-color: white;
+        }
+
+        #community {
+            background-color: lightgray;
+        }
+
+        #fandom {
+            background-color: white;
+        }
+
+        #technology {
+            background-color: lightgray;
+
+            .img-container {
+                background-color: green;
+            }
+        }
+    }
+
+
+
+    footer {
+        background-color: black;
+
+        #info-section {
+            background-color: black;
+            border-bottom: 2px solid gray;
+
+            #social-container {
+                background-color: red;
+            }
+
+        }
+
+        #footer-section .content-container {
+            background-color: lightseagreen;
+
+            div {
+                background-color: pink;
+            }
+        }
+
+
+    }
+}
+
+/*debug-end*/
+
+/*header-begin*/
+header {
+    padding: 1.875rem 0.75rem 1.875rem 0.75rem;
+    justify-content: space-around;
+    align-items: center;
+
+    .header-container {
+        width: 62.5%;
+        align-items: center;
+
+        div {
+            padding: 0.875rem 0.75rem 0.875rem 0.75rem;
+            width: 20%;
+            align-items: center;
+        }
+
+        nav {
+            padding: 0.875rem 0.75rem 0.875rem 0.75rem;
+            width: 60%;
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+        }
+
+        #login-container {
+            justify-content: end;
+        }
+    }
+}
+
+
+
+/*header-end*/
+/*main-begin*/
+
+#jumbotron {
+    height: 500px;
+
+    .content-container {
+        width: 47.5%;
+    }
+}
+
+#technology {
+    height: 1000px;
+
+    .content-container {
+        height: 90%;
+    }
+
+}
+
+/*main-end*/
+/*footer-begin*/
+
+.footercontainer {
+    height: 100%;
+}
+
+#info-section {
+    height: 630px;
+    padding-top: 0.75rem;
+    padding-bottom: 2.5rem;
+
+    .content-container {
+        height: 100%;
+
+        #social-container {
+            flex-grow: 2;
+
+        }
+    }
+}
+
+#footer-section.content-section {
+    height: fit-content;
+    padding: 1.875rem 0rem 0rem 0rem;
+
+    .content-container {
+        height: fit-content;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.1875rem 1.25rem 1.1875rem 1.25rem;
+
+        div {
+
+            padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+        }
+    }
+}
+
+/*footer-end*/
