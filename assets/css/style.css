@@ -1,3 +1,16 @@
+/*general-color-variables-begin*/
+:root {
+    --dis-header-color: #255ee9;
+    --dis-main-lighter-color: #ffffff;
+    --dis-main-light-color: #f6f6f6;
+    --dis-button-color: #8ea1e1;
+    --dis-button-secondary-color: #23272a;
+    --dis-footer-text-color: #7289da;
+    --dis-footer-color: #23272a;
+
+}
+
+/*general-color-variables-end*/
 /*general-attributes-begin*/
 * {
     margin: 0px;
@@ -19,7 +32,16 @@ body {
     display: flex;
 }
 
-/*premade-containers-sizing-begin*/
+/*premade-containers-styling-begin*/
+
+
+.content-section:nth-child(odd) {
+    background-color: var(--dis-main-lighter-color);
+}
+
+.content-section:nth-child(even) {
+    background-color: var(--dis-main-light-color);
+}
 
 .content-section {
     height: 600px;
@@ -50,13 +72,19 @@ body {
     }
 }
 
-/*premade-containers-sizing-end*/
+/*premade-containers-styling-end*/
 
 
 /*utility-end*/
 
 
 /*debug-begin*/
+.debug-l {
+    * {
+        border: 1px dotted black;
+    }
+}
+
 .debug {
 
     header {
@@ -175,6 +203,7 @@ header {
     padding: 1.875rem 0.75rem 1.875rem 0.75rem;
     justify-content: space-around;
     align-items: center;
+    background-color: var(--dis-header-color);
 
     .header-container {
         width: 62.5%;
@@ -207,7 +236,10 @@ header {
 /*main-begin*/
 
 #jumbotron {
-    height: 500px;
+
+    background-image: url("/assets/img/jumbo.png");
+    background-size: cover;
+    background-position:;
 
     .content-container {
         width: 47.5%;
