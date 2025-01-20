@@ -82,8 +82,6 @@ body {
 
     .content-container {
         align-self: center;
-
-        align-items: center;
         width: 62.5%;
 
 
@@ -111,8 +109,12 @@ body {
 
 
         .vertical-container {
-            height: 100%;
             flex-grow: 1;
+            flex-direction: column;
+
+            h3 {
+                font-size: 30px;
+            }
         }
     }
 }
@@ -284,7 +286,9 @@ header {
 /*header-end*/
 /*main-begin*/
 
-
+.paragraph-container:not(#jumbotron div div) {
+    margin: 0 4.5rem 0 4.5rem;
+}
 
 section#jumbotron {
 
@@ -304,9 +308,7 @@ section#jumbotron {
         text-align: center;
         line-height: 2em;
 
-        .paragraph-container:not(#jumbotron div div) {
-            margin: 4.5rem;
-        }
+
 
         .paragraph-container {
             padding-bottom: none;
@@ -368,41 +370,60 @@ section#technology {
 /*footer-begin*/
 
 
-.footercontainer {
-    height: 100%;
+footer h3,
+footer h4 {
+    color: var(--dis-footer-text-color);
 }
 
 #info-section {
     height: 630px;
     padding-top: 0.75rem;
-    padding-bottom: 2.5rem;
+
     background-color: var(--dis-footer-color);
 
     .content-container {
-        height: 100%;
 
-        #social-container {
+        a {
+            padding: 10px 0;
+        }
+
+        #utility-container {
             flex-grow: 2;
 
+            div img {
+                width: 30px;
+            }
+
+            .language-change span span {
+                vertical-align: 50%;
+            }
+        }
+
+        #social-container {
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 }
 
 #footer-section.content-section {
+
     height: fit-content;
-    padding: 1.875rem 0rem 0rem 0rem;
+
     background-color: var(--dis-footer-color);
 
     .content-container {
+        border-top: 1px solid var(--dis-footer-text-color);
+        padding: 2rem 0;
         height: fit-content;
         justify-content: space-between;
-        align-items: center;
-        padding: 1.1875rem 1.25rem 1.1875rem 1.25rem;
+        padding-bottom: 5rem;
 
-        div {
 
-            padding: 0.5rem 1.25rem 0.5rem 1.25rem;
-        }
+
     }
 }
 
