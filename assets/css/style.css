@@ -2,6 +2,7 @@
 :root {
     --dis-header-color: #255ee9;
     --dis-main-light-color: #f6f6f6;
+    --dis-main-lighter-color: #ffffff;
     --dis-button-primary-color: #f6f6f6;
     --dis-button-secondary-color: #23272a;
     --dis-button-extra-color: #8ea1e1;
@@ -19,7 +20,8 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: Whitney, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: var(--dis-main-light-color);
+    color: var(--dis-button-primary-color);
+    font-weight: 600;
 }
 
 html,
@@ -70,7 +72,7 @@ body {
 }
 
 .content-section:nth-child(even) {
-    background-color: var(--dis-main-light-color);
+    background-color: var(--dis-main-lighter-color);
 }
 
 .content-section {
@@ -78,21 +80,35 @@ body {
     justify-content: center;
     align-items: center;
 
-
     .content-container {
-        justify-content: center;
+        align-self: center;
+
         align-items: center;
         width: 62.5%;
 
+
         .img-container {
-            height: 100%;
             flex-grow: 3;
+
         }
 
         .paragraph-container {
             flex-grow: 2;
-            font-size: 1.5em;
+            line-height: 1.5rem;
+
+            * {
+                color: var(--dis-footer-color);
+            }
+
+            h2 {
+                padding: 2rem 0;
+                line-height: 3.5rem;
+                font-size: 3rem;
+            }
+
         }
+
+
 
         .vertical-container {
             height: 100%;
@@ -228,11 +244,16 @@ body {
 /*debug-end*/
 
 /*header-begin*/
+
+
 header {
+
     padding: 0.9375rem;
     justify-content: space-around;
     align-items: center;
     background-color: var(--dis-header-color);
+
+
 
     .header-container {
         padding: 0.25rem;
@@ -263,21 +284,33 @@ header {
 /*header-end*/
 /*main-begin*/
 
-#jumbotron {
+
+
+section#jumbotron {
 
     background-image: url("/assets/img/jumbo.png");
     background-size: cover;
+
+    p {
+        color: var(--dis-main-light-color);
+    }
 
     .content-container {
 
         width: 47.5%;
         flex-direction: column;
         align-self: flex-start;
-
-
+        justify-content: center;
         text-align: center;
         line-height: 2em;
 
+        .paragraph-container:not(#jumbotron div div) {
+            margin: 4.5rem;
+        }
+
+        .paragraph-container {
+            padding-bottom: none;
+        }
 
         h1 {
             font-size: 50px;
@@ -290,19 +323,46 @@ header {
             font-size: 1.5em;
             padding: 40px 0;
         }
+
+
     }
 
 
 }
 
-#technology {
+
+
+section#technology {
     height: 1000px;
 
     .content-container {
-        height: 90%;
+
+        .img-container {
+            justify-content: center;
+        }
+
+        .bottom-ctacontainer {
+            background-image: url(/assets/img/stars.svg);
+            background-position: top;
+            background-repeat: no-repeat;
+
+            flex-direction: column;
+            align-items: center;
+
+            padding: 20px 0;
+
+            span {
+                padding: 20px;
+                font-size: larger;
+                color: var(--dis-button-secondary-color);
+
+            }
+        }
     }
 
 }
+
+
 
 /*main-end*/
 /*footer-begin*/
