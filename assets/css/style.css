@@ -36,6 +36,29 @@ body {
     display: flex;
 }
 
+.separator {
+
+    filter: invert(100%) sepia(34%) saturate(158%) hue-rotate(231deg) brightness(116%) contrast(93%);
+
+    width: 100%;
+    height: 150px;
+
+    img {
+        width: 100%;
+    }
+
+
+}
+
+.inverted-separator {
+    img {
+        -webkit-transform: scaleY(-1);
+        -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        transform: scaleY(-1);
+    }
+}
+
 /*premade-containers-styling-begin*/
 [class^="bttn"] {
     border-radius: 30px;
@@ -67,11 +90,11 @@ body {
 }
 
 
-.content-section:nth-child(odd) {
+.content-section:nth-of-type(odd) {
     background-color: var(--dis-main-light-color);
 }
 
-.content-section:nth-child(even) {
+.content-section:nth-of-type(even) {
     background-color: var(--dis-main-lighter-color);
 }
 
@@ -250,7 +273,7 @@ body {
 
 header {
 
-    padding: 0.9375rem;
+    padding: 2rem;
     justify-content: space-around;
     align-items: center;
     background-color: var(--dis-header-color);
@@ -286,14 +309,15 @@ header {
 /*header-end*/
 /*main-begin*/
 
-.paragraph-container:not(#jumbotron div div) {
-    margin: 0 4.5rem 0 4.5rem;
+.paragraph-container {
+    margin: 0 10rem 0 10rem;
 }
 
 section#jumbotron {
 
     background-image: url("/assets/img/jumbo.png");
     background-size: cover;
+    height: 800px;
 
     p {
         color: var(--dis-main-light-color);
@@ -335,11 +359,14 @@ section#jumbotron {
 
 
 section#technology {
-    height: 1000px;
+    height: 100%;
+    padding-top: 100px;
 
     .content-container {
 
         .img-container {
+            height: 800px;
+            /*forced to give height in orded to expand image*/
             justify-content: center;
         }
 
@@ -351,7 +378,7 @@ section#technology {
             flex-direction: column;
             align-items: center;
 
-            padding: 20px 0;
+            padding: 20px 0 150px 0;
 
             span {
                 padding: 20px;
@@ -390,21 +417,23 @@ footer h4 {
         #utility-container {
             flex-grow: 2;
 
-            div img {
-                width: 30px;
+            span span {
+                vertical-align: 50%;
             }
 
-            .language-change span span {
-                vertical-align: 50%;
+            .language-change img {
+                width: 30px;
+                margin: 10px 10px 0 0;
             }
         }
 
         #social-container {
 
             img {
-                width: 30px;
-                height: 30px;
+                width: 40px;
+                margin: 40px 40px 0 0;
             }
+
         }
     }
 }
